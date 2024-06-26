@@ -7,24 +7,28 @@ import { Button } from '@/components/ui/button'
 ---
 
 <Layout title="Joe Linogao">
-	<main
-		class="m-auto flex h-screen w-full max-w-7xl flex-col items-center justify-center gap-8 p-4 md:flex-row"
-	>
-		<div class="shadow-[8px_8px_0px] shadow-myTheme-primary">
-			<Image src={heroImage} alt={'JoeDoesCoding Hero Image'} />
-		</div>
+	<main class="m-auto flex flex-col items-center justify-center">
+		<div
+			class="m-auto flex min-h-[80vh] w-full max-w-7xl flex-col items-center justify-center gap-8 p-4 md:flex-row"
+		>
+			<div class="shadow-[8px_8px_0px] shadow-myTheme-primary">
+				<Image src={heroImage} alt={'JoeDoesCoding Hero Image'} />
+			</div>
 
-		<div class="flex flex-col gap-8">
-			<h1 class="text-left font-heading text-5xl font-bold text-slate-800">
-				<span class="underline decoration-myTheme-primary decoration-4">JoeDoesCoding</span>
-			</h1>
-			<p class="rounded-md p-2 text-left font-body text-base text-myTheme-text">
-				Hi! My name is <mark class="bg-myTheme-accent p-1 font-bold text-white">
-					Joe Linogao,</mark
-				> and welcome to my website. This is currently a work in progress, but feel free to follow
-				me below to keep up to date on my projects (if I remember to link them)
-			</p>
-			<Button className="w-fit">Click me (I do nothing)</Button>
+			<div class="flex flex-col gap-8">
+				<h1 class="text-left font-heading text-5xl font-bold text-slate-800">
+					<span class="underline decoration-myTheme-primary decoration-4"
+						>JoeDoesCoding</span
+					>
+				</h1>
+				<p class="rounded-md p-2 text-left font-body text-base text-myTheme-text">
+					Hi! My name is <mark class="bg-myTheme-accent p-1 font-bold text-white">
+						Joe Linogao,</mark
+					> and welcome to my website. This is currently a work in progress, but feel free
+					to follow me below to keep up to date on my projects (if I remember to link them)
+				</p>
+				<Button className="w-fit">Click me (I do nothing)</Button>
+			</div>
 		</div>
 
 		<!-- <ul role="list" class="link-card-grid"> ! cool info wiht lists -->
