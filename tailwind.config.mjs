@@ -17,9 +17,9 @@ export default {
                 myTheme: {
                     text: '#120803',
                     background: '#fffaeb',
-                    primary: '#ff8400',
+                    primary: '#803054',
                     secondary: '#ffcbab',
-                    accent: '#803054',
+                    accent: '#ff8400',
                 },
             },
             fontFamily: {

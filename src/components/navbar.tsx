@@ -11,22 +11,22 @@ export default function GlobalNavbar() {
         },
         {
             title: 'About',
-            href: '/about',
+            href: '/',
         },
         {
             title: 'Projects',
-            href: '/projects',
+            href: '/',
         },
         {
             title: 'Contact',
-            href: '/contact',
+            href: '/',
         },
     ]
 
     return (
         <header>
             <div className="z-10 flex w-full justify-center">
-                <nav id="global-navbar" className="flex w-full max-w-7xl gap-8 p-8">
+                <nav id="global-navbar" className="flex w-full max-w-7xl gap-8 p-4 md:py-8">
                     {navigationLinks.map((navItem: navigationLinkProps) => {
                         return (
                             <a
