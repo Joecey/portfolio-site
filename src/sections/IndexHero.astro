@@ -1,0 +1,72 @@
+---
+import { Image } from 'astro:assets'
+import heroImage from '@/assets/hero-image.webp'
+import GithubIcon from '@/components/github'
+import LinkedIcon from '@/components/linkedin'
+---
+
+<div
+	id="home"
+	class="m-auto flex min-h-[70vh] w-full max-w-7xl flex-col items-center justify-center gap-8 p-8 md:flex-row"
+>
+	<div
+		class="relative max-w-md animate-float rounded-full bg-gradient-to-tr from-myTheme-accent to-myTheme-primary p-1 md:flex-1"
+	>
+		<Image
+			src={heroImage}
+			alt={'JoeDoesCoding Hero Image'}
+			class={'rounded-full  aspect-square object-cover '}
+		/>
+	</div>
+
+	<div class="flex flex-col gap-8 md:flex-1">
+		<h1 class="text-left font-heading text-4xl font-bold text-slate-800 md:text-5xl">
+			<span class="underline decoration-myTheme-primary decoration-4">JoeDoesCoding</span>
+		</h1>
+		<div
+			class="flex flex-col gap-4 rounded-md p-2 text-left font-body text-base text-myTheme-text md:text-lg"
+		>
+			<p>
+				Hi! My name is <mark
+					class="bg-myTheme-accent p-1 font-bold text-myTheme-background"
+				>
+					Joe Linogao,</mark
+				> and welcome to my little corner of the internet ✨
+			</p>
+			<p>
+				TL:DR: I am a <strong>full-stack software engineer</strong> based in Ireland, with a
+				lot of projects in my head and so little time. Some say I am a generatalist, but I say
+				learn the tools that will help me complete my goals! ⛏️
+			</p>
+			<div id="socials-quick-links" class="flex flex-row gap-8">
+				<a
+					id="social-link"
+					class="group flex flex-row gap-2"
+					href="https://github.com/Joecey"
+					target="_blank"
+				>
+					<GithubIcon />
+					<p
+						class="font-bold underline transition-colors group-hover:text-myTheme-accent"
+					>
+						Github
+					</p>
+				</a>
+
+				<a
+					id="social-link"
+					class="group flex flex-row gap-2"
+					href="https://www.linkedin.com/in/joe-linogao/"
+					target="_blank"
+				>
+					<LinkedIcon />
+					<p
+						class="font-bold underline transition-colors group-hover:text-myTheme-accent"
+					>
+						LinkedIn
+					</p>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

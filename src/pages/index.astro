@@ -1,85 +1,14 @@
 ---
 import '@/styles/globals.css'
 import Layout from '../layouts/Layout.astro'
-import { Image } from 'astro:assets'
-import heroImage from '@/assets/hero-image.jpeg'
+import IndexHero from '@/sections/IndexHero.astro'
+import IndexAbout from '@/sections/IndexAbout.astro'
 ---
 
 <Layout title="Joe Linogao">
 	<main class="m-auto flex flex-col items-center justify-center">
-		<div
-			class="m-auto flex min-h-[80vh] w-full max-w-7xl flex-col items-center justify-center gap-8 p-4 md:flex-row"
-		>
-			<div class="flex-1">
-				<Image
-					src={heroImage}
-					alt={'JoeDoesCoding Hero Image'}
-					class={'rounded-tl-lg rounded-br-lg shadow-[8px_8px_0px] shadow-myTheme-primary'}
-				/>
-			</div>
-
-			<div class="flex flex-1 flex-col gap-8">
-				<h1 class="text-left font-heading text-4xl font-bold text-slate-800 md:text-5xl">
-					<span class="underline decoration-myTheme-primary decoration-4"
-						>JoeDoesCoding</span
-					>
-				</h1>
-				<div
-					class="flex flex-col gap-4 rounded-md p-2 text-left font-body text-base text-myTheme-text md:text-lg"
-				>
-					<p>
-						Hi! My name is <mark
-							class="bg-myTheme-accent p-1 font-bold text-myTheme-background"
-						>
-							Joe Linogao,</mark
-						> and welcome to my little corner of the internet ✨
-					</p>
-					<p>
-						TL:DR: I am a <strong>full-stack software engineer</strong> based in Ireland,
-						with a lot of projects in my head and so little time. Some say I am a generatalist,
-						but I say learn the tools that will help me complete my goals! ⛏️
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<svg id="wave" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg"
-			><defs
-				><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"
-					><stop stop-color="rgba(128, 48, 84, 1)" offset="0%"></stop><stop
-						stop-color="rgba(128, 48, 84, 1)"
-						offset="100%"></stop></linearGradient
-				></defs
-			><path
-				style="transform:translate(0, 0px); opacity:1"
-				fill="url(#sw-gradient-0)"
-				d="M0,80L120,70C240,60,480,40,720,40C960,40,1200,60,1440,71.7C1680,83,1920,87,2160,83.3C2400,80,2640,70,2880,68.3C3120,67,3360,73,3600,70C3840,67,4080,53,4320,40C4560,27,4800,13,5040,13.3C5280,13,5520,27,5760,40C6000,53,6240,67,6480,61.7C6720,57,6960,33,7200,31.7C7440,30,7680,50,7920,55C8160,60,8400,50,8640,38.3C8880,27,9120,13,9360,20C9600,27,9840,53,10080,55C10320,57,10560,33,10800,21.7C11040,10,11280,10,11520,20C11760,30,12000,50,12240,48.3C12480,47,12720,23,12960,20C13200,17,13440,33,13680,48.3C13920,63,14160,77,14400,75C14640,73,14880,57,15120,48.3C15360,40,15600,40,15840,35C16080,30,16320,20,16560,15C16800,10,17040,10,17160,10L17280,10L17280,100L17160,100C17040,100,16800,100,16560,100C16320,100,16080,100,15840,100C15600,100,15360,100,15120,100C14880,100,14640,100,14400,100C14160,100,13920,100,13680,100C13440,100,13200,100,12960,100C12720,100,12480,100,12240,100C12000,100,11760,100,11520,100C11280,100,11040,100,10800,100C10560,100,10320,100,10080,100C9840,100,9600,100,9360,100C9120,100,8880,100,8640,100C8400,100,8160,100,7920,100C7680,100,7440,100,7200,100C6960,100,6720,100,6480,100C6240,100,6000,100,5760,100C5520,100,5280,100,5040,100C4800,100,4560,100,4320,100C4080,100,3840,100,3600,100C3360,100,3120,100,2880,100C2640,100,2400,100,2160,100C1920,100,1680,100,1440,100C1200,100,960,100,720,100C480,100,240,100,120,100L0,100Z"
-			></path></svg
-		>
-		<div id="section-wrapper" class="mt-[-1px] w-full bg-myTheme-primary">
-			<div
-				class="m-auto flex min-h-[60vh] w-full max-w-7xl flex-col justify-center gap-8 p-4 md:flex-row"
-			>
-				<div class="flex flex-1 flex-col gap-8">
-					<h1
-						class="text-left font-heading text-4xl font-bold text-myTheme-background md:text-5xl"
-					>
-						<span
-							class="underline decoration-myTheme-background decoration-4 underline-offset-4"
-							>About Me
-						</span>
-					</h1>
-					<div
-						class="flex flex-col gap-4 rounded-md p-2 text-left font-body text-base text-myTheme-background md:text-lg"
-					>
-						<p>
-							This website is still under construction... But feel free to read more
-							about my experiences and my projects 💎
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
+		<IndexHero />
+		<IndexAbout />
 	</main>
 </Layout>
 

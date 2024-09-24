@@ -7,11 +7,11 @@ export default function GlobalNavbar() {
     const navigationLinks: navigationLinkProps[] = [
         {
             title: 'Home',
-            href: '/',
+            href: '/#home',
         },
         {
             title: 'About',
-            href: '/',
+            href: '/#about',
         },
         {
             title: 'Projects',
@@ -26,7 +26,10 @@ export default function GlobalNavbar() {
     return (
         <header>
             <div className="z-10 flex w-full justify-center">
-                <nav id="global-navbar" className="flex w-full max-w-7xl gap-8 p-4 md:py-8">
+                <nav
+                    id="global-navbar"
+                    className="flex w-full max-w-7xl justify-center gap-8 p-8 md:py-8"
+                >
                     {navigationLinks.map((navItem: navigationLinkProps) => {
                         return (
                             <a
