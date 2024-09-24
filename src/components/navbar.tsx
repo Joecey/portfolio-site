@@ -7,7 +7,7 @@ export default function GlobalNavbar() {
     const navigationLinks: navigationLinkProps[] = [
         {
             title: 'Home',
-            href: '/#home',
+            href: '/',
         },
         {
             title: 'About',
