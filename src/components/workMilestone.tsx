@@ -18,12 +18,15 @@ export default function WorkMilestone({
     projectLink,
 }: WorkMilestoneProps) {
     return (
-        <MilestoneWrapper projectLink={projectLink}>
-            {occupation && emoji && (
-                <h3 className="font-body font-bold">{`${occupation} ${emoji}`}</h3>
-            )}
-            <p className="mt-1">{description}</p>
-        </MilestoneWrapper>
+        <div className="flex flex-col gap-1 md:flex-row md:gap-4 ">
+            <p className="w-full max-w-40 text-sm font-bold">{`${startPeriod} - ${endPeriod}`}</p>
+            <MilestoneWrapper projectLink={projectLink}>
+                {occupation && emoji && (
+                    <h3 className="font-body font-bold">{`${occupation} ${emoji}`}</h3>
+                )}
+                <p className="mt-1">{description}</p>
+            </MilestoneWrapper>
+        </div>
     )
 }
 
@@ -38,14 +41,14 @@ const MilestoneWrapper: React.FC<MilestoneWrapperProps> = ({ children, projectLi
             <a
                 href={projectLink}
                 target="_blank"
-                className="rounded-md bg-myTheme-secondary/10 p-2 transition-all hover:bg-myTheme-accent/20"
+                className="w-full rounded-md bg-myTheme-secondary/10 p-2 transition-all hover:bg-myTheme-accent/20"
             >
                 {children}
             </a>
         )
     } else {
         return (
-            <div className="rounded-md bg-myTheme-secondary/10 p-2 transition-all hover:bg-myTheme-accent/20">
+            <div className="w-full rounded-md bg-myTheme-secondary/10 p-2 transition-all hover:bg-myTheme-accent/20">
                 {children}
             </div>
         )

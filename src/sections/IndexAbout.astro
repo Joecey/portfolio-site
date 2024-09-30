@@ -13,12 +13,30 @@ type WorkMilestoneProps = {
 }
 const workMilestoneContent: WorkMilestoneProps[] = [
 	{
-		startPeriod: 'Sep 2023',
-		occupation: 'Akara Robotics - Software Engineer',
-		emoji: '🤖',
-		projectLink: 'https://www.akara.ai/',
+		startPeriod: 'May 2021',
+		endPeriod: 'Aug 2021',
+		occupation: 'Trinity College Dublin - Research Scholar',
+		emoji: '🦠',
 		description:
-			'Worked as a full-stack software engineer maintaining key IOT sensor infrastructure and dashboard analytics',
+			'Led research project in collaboration with the Laidlaw Foundation to explore deep-learning applications for automatically counting bacteria colonies',
+	},
+	{
+		startPeriod: 'Sep 2018',
+		endPeriod: 'May 2022',
+		occupation: 'Trinity College Dublin - BAI Engineering with Management',
+		emoji: '🎓',
+		projectLink: 'https://orcid.org/0000-0003-3083-8181',
+		description:
+			'Graduated Trinity College Dublin as a Laidlaw Scholar, a top performer in my class, and as a co-author for various publications ',
+	},
+	{
+		startPeriod: 'May 2022',
+		endPeriod: 'Aug 2022',
+		occupation: 'Akara Robotics - Robotics Intern',
+		emoji: '🤖',
+		projectLink: 'https://www.akara.ai/rcht-trial',
+		description:
+			'Assisted in deploying two autonomous cleaning robots in the UK, gathered and visualised telemetary data, and trained hospital staff',
 	},
 	{
 		startPeriod: 'Sep 2022',
@@ -27,6 +45,21 @@ const workMilestoneContent: WorkMilestoneProps[] = [
 		emoji: '📦',
 		description:
 			'Worked as an SDET creating automated testing pipelines for new software releases',
+	},
+	{
+		startPeriod: 'Sep 2023',
+		occupation: 'Akara Robotics - Software Engineer',
+		emoji: '🤖',
+		projectLink: 'https://www.akara.ai/',
+		description:
+			'Worked as a full-stack software engineer maintaining key IOT sensor infrastructure and dashboard analytics',
+	},
+	{
+		startPeriod: 'Jan 2024',
+		occupation: 'ATU Galway - Higher Diploma in Computer Science',
+		emoji: '📚',
+		description:
+			'Decided to go back to university part-time to get more formal training in CompSci',
 	},
 ]
 ---
@@ -49,7 +82,7 @@ const workMilestoneContent: WorkMilestoneProps[] = [
 	></path></svg
 >
 <div id="about" class="mt-[-1px] w-full bg-myTheme-primary">
-	<div class="m-auto flex min-h-[90vh] w-full max-w-5xl flex-col gap-8 p-8">
+	<div class="m-auto flex min-h-[90vh] w-full max-w-5xl flex-col gap-8 p-4 md:p-8">
 		<div class="flex flex-col gap-8">
 			<div class="flex items-center gap-8">
 				<h1
@@ -94,9 +127,11 @@ const workMilestoneContent: WorkMilestoneProps[] = [
 			<div
 				class="flex flex-col gap-4 rounded-md text-left font-body text-base text-myTheme-background"
 			>
-				<h2 id="joe-linogao-latest-projects" class="font-body font-bold">Bio 💼</h2>
+				<h2 id="joe-linogao-latest-projects" class="font-body font-bold">
+					The Sacred Timeline 💼
+				</h2>
 				<hr />
-				<div id="joe-linogao-previous-work" class="flex flex-col gap-2">
+				<div id="joe-linogao-previous-work" class="flex flex-col gap-4 md:gap-2">
 					{
 						workMilestoneContent.map((milestone: WorkMilestoneProps) => {
 							return (
