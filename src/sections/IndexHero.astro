@@ -7,32 +7,36 @@ import LinkedIcon from '@/components/linkedin'
 
 <div
 	id="home"
-	class="z-[-99] m-auto flex min-h-[90vh] w-full max-w-7xl flex-col items-center justify-center gap-8 p-8 md:flex-row"
+	class="mt-12 flex min-h-[90vh] w-full max-w-5xl flex-col items-center justify-center gap-8 p-8 md:m-auto md:flex-row"
 >
-	<div
-		class="relative max-w-md animate-float rounded-full bg-gradient-to-tr from-myTheme-accent to-myTheme-primary p-1 md:flex-1"
-	>
-		<Image
-			src={heroImage}
-			alt={'JoeDoesCoding Hero Image'}
-			class={'rounded-full  aspect-square object-cover '}
-		/>
-	</div>
-
 	<div class="flex flex-col gap-8 md:flex-1">
-		<div id="hero-header-text" class="flex flex-col gap-2 px-2">
-			<h1 class="text-left font-heading text-4xl font-bold text-slate-800 md:text-5xl">
-				<span class="underline decoration-myTheme-primary decoration-4">JoeDoesCoding</span>
-			</h1>
-			<h2 class="font-body text-base font-bold">
-				📌 Dublin, Ireland @<a
-					href="/#about"
-					class="underline transition-colors hover:text-myTheme-accent">Akara Robotics</a
-				>
-			</h2>
+		<div id="hero-standout" class="flex flex-col items-center gap-4 md:flex-row">
+			<div
+				class="relative w-48 animate-float rounded-full bg-gradient-to-tr from-myTheme-accent to-myTheme-primary p-1 md:w-36"
+			>
+				<Image
+					src={heroImage}
+					alt={'JoeDoesCoding Hero Image'}
+					class={'rounded-full  aspect-square object-cover '}
+				/>
+			</div>
+			<div id="hero-header-text" class="flex flex-col gap-2 px-2">
+				<h1 class="text-left font-heading text-4xl font-bold text-slate-800 md:text-5xl">
+					<span class="underline decoration-myTheme-primary decoration-4"
+						>JoeDoesCoding</span
+					>
+				</h1>
+				<h2 class="font-body text-base font-bold">
+					📌 Dublin, Ireland @<a
+						href="/#about"
+						class="underline transition-colors hover:text-myTheme-accent"
+						>Akara Robotics</a
+					>
+				</h2>
+			</div>
 		</div>
 		<div
-			class="flex flex-col gap-4 rounded-md p-2 text-left font-body text-base text-myTheme-text md:text-lg"
+			class="flex flex-col gap-4 rounded-md p-2 text-left font-body text-base text-myTheme-text"
 		>
 			<p>
 				Hi! My name is <mark
@@ -42,9 +46,10 @@ import LinkedIcon from '@/components/linkedin'
 				> and welcome to my little corner of the internet ✨
 			</p>
 			<p>
-				TL:DR: I am a <strong>full-stack software engineer</strong> based in Ireland, with a
-				lot of projects in my head and so little time. Aside from coding projects that inspire
-				me and others, I also love <a
+				Joe is a <strong>full-stack software engineer</strong> based in Ireland, with a lot of
+				projects in his head and so little time. He loves solving niche problems and providing
+				exciting yet intuitive solutions to those who stumble across his work. Aside from coding
+				projects that inspire him and others, he also loves <a
 					href="https://open.spotify.com/artist/4KjbJKvrp2aBFZTO1zGiTn"
 					target="_blank"
 					class="font-bold text-myTheme-accent hover:underline">music</a

@@ -1,5 +1,34 @@
 ---
 // code and imports go here
+import { Button } from '@/components/ui/button'
+import WorkMilestone from '@/components/workMilestone'
+
+type WorkMilestoneProps = {
+	startPeriod: string
+	endPeriod?: string
+	occupation?: string
+	description: string
+	emoji?: string
+	projectLink?: string
+}
+const workMilestoneContent: WorkMilestoneProps[] = [
+	{
+		startPeriod: 'Sep 2023',
+		occupation: 'Akara Robotics - Software Engineer',
+		emoji: '🤖',
+		projectLink: 'https://www.akara.ai/',
+		description:
+			'Worked as a full-stack software engineer maintaining key IOT sensor infrastructure and dashboard analytics',
+	},
+	{
+		startPeriod: 'Sep 2022',
+		endPeriod: 'Sep 2023',
+		occupation: 'Intact Software - Software Developer in Test',
+		emoji: '📦',
+		description:
+			'Worked as an SDET creating automated testing pipelines for new software releases',
+	},
+]
 ---
 
 <svg
@@ -20,20 +49,70 @@
 	></path></svg
 >
 <div id="about" class="mt-[-1px] w-full bg-myTheme-primary">
-	<div class="m-auto flex min-h-[80vh] w-full max-w-7xl flex-col gap-8 p-8">
-		<div class="mt-8 flex flex-col gap-8">
-			<h1
-				class="text-left font-heading text-4xl font-bold text-myTheme-background underline decoration-myTheme-background decoration-4 underline-offset-4 md:text-5xl"
-			>
-				Bio
-			</h1>
+	<div class="m-auto flex min-h-[90vh] w-full max-w-5xl flex-col gap-8 p-8">
+		<div class="flex flex-col gap-8">
+			<div class="flex items-center gap-8">
+				<h1
+					class="text-left font-heading text-4xl font-bold text-myTheme-background underline decoration-myTheme-background decoration-4 underline-offset-4 md:text-5xl"
+				>
+					About
+				</h1>
+				<a href="#about">
+					<Button className="text-md w-fit font-bold" size={'sm'}
+						>View Portfolio &rarr;</Button
+					>
+				</a>
+			</div>
 			<div
-				class="flex flex-col gap-4 rounded-md text-left font-body text-base text-myTheme-background md:text-lg"
+				class="flex
+					flex-col
+					gap-4
+					rounded-md
+					text-left
+					font-body
+					text-base
+					text-myTheme-background"
 			>
-				<p>
-					This website is still under construction... Maybe there will be more when you
-					come back next time? 👀
-				</p>
+				<h2 id="joe-linogao-latest-projects" class="font-body font-bold">
+					Latest Fry-Up 🔥👨‍🍳
+				</h2>
+				<hr />
+				<a
+					id="latest-project-link"
+					href="https://github.com/Joecey/vlrgg-player-stats"
+					target="_blank"
+					class="rounded-md bg-myTheme-secondary/10 p-2 transition-all hover:bg-myTheme-accent/20"
+				>
+					<h3 class="font-body font-bold">Unofficial vlg.gg REST API V2 🎮</h3>
+					<p class="mt-1">
+						REST API built using FastAPI for the <span class="underline">vlr.gg</span> website
+						to get information about esports players. Database supported by cron jobs which
+						scrape the website on a weekly basis to get up-to-date information
+					</p>
+				</a>
+			</div>
+			<div
+				class="flex flex-col gap-4 rounded-md text-left font-body text-base text-myTheme-background"
+			>
+				<h2 id="joe-linogao-latest-projects" class="font-body font-bold">Bio 💼</h2>
+				<hr />
+				<div id="joe-linogao-previous-work" class="flex flex-col gap-2">
+					{
+						workMilestoneContent.map((milestone: WorkMilestoneProps) => {
+							return (
+								<WorkMilestone
+									occupation={milestone.occupation}
+									emoji={milestone.emoji}
+									startPeriod={milestone.startPeriod}
+									endPeriod={milestone.endPeriod}
+									description={milestone.description}
+									projectLink={milestone.projectLink}
+								/>
+							)
+						})
+					}
+				</div>
+				<hr />
 			</div>
 		</div>
 	</div>
