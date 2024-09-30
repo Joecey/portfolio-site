@@ -7,10 +7,10 @@ export default function GlobalNavbar() {
     const navigationLinks: navigationLinkProps[] = [
         {
             title: 'Home',
-            href: '/',
+            href: '/#home',
         },
         {
-            title: 'About',
+            title: 'Bio',
             href: '/#about',
         },
         {
@@ -18,17 +18,17 @@ export default function GlobalNavbar() {
             href: '/',
         },
         {
-            title: 'Contact',
+            title: 'Hobbies',
             href: '/',
         },
     ]
 
     return (
         <header>
-            <div className="z-10 flex w-full justify-center">
+            <div className="fixed z-10 flex w-full justify-center ">
                 <nav
                     id="global-navbar"
-                    className="flex w-full max-w-7xl justify-center gap-8 p-8 md:py-8"
+                    className="mt-8 flex w-fit max-w-7xl justify-center gap-8 rounded-full bg-myTheme-background/50 p-8 py-2 outline outline-1 outline-myTheme-primary backdrop-blur"
                 >
                     {navigationLinks.map((navItem: navigationLinkProps) => {
                         return (
