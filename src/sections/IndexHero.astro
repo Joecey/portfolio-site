@@ -3,6 +3,7 @@ import { Image } from 'astro:assets'
 import heroImage from '@/assets/hero-image.webp'
 import GithubIcon from '@/components/github'
 import LinkedIcon from '@/components/linkedin'
+import TechTab from '@/components/techTab'
 ---
 
 <div
@@ -46,11 +47,10 @@ import LinkedIcon from '@/components/linkedin'
 				> and welcome to my little corner of the internet ✨
 			</p>
 			<p>
-				Joe is a <strong class="text-myTheme-accent">Full-stack Software Engineer</strong> and
-				<strong class="text-myTheme-accent">Laidlaw Scholar</strong> based in Ireland, with a
-				lot of projects in his head and so little time. He loves solving niche problems and providing
-				exciting yet intuitive solutions to those who stumble across his work. Aside from coding
-				projects that inspire him and others, he also loves <a
+				Joe is a <strong class="text-myTheme-accent">Full-stack Software Engineer</strong> based
+				in Ireland, with a lot of projects in his head and so little time. He loves solving niche
+				problems and providing exciting yet intuitive solutions to those who stumble across his
+				work. Aside from coding projects that inspire him and others, he also loves <a
 					href="https://open.spotify.com/artist/4KjbJKvrp2aBFZTO1zGiTn"
 					target="_blank"
 					class="font-bold text-myTheme-accent hover:underline">music</a
@@ -84,6 +84,11 @@ import LinkedIcon from '@/components/linkedin'
 						LinkedIn
 					</p>
 				</a>
+			</div>
+			<div id="text-stack-list" class="mt-4 flex flex-wrap items-center gap-2">
+				<p class="font-bold">Tech stack:&nbsp;</p>
+				<TechTab name="React" />
+				<TechTab name="Typescript" />
 			</div>
 		</div>
 	</div>
