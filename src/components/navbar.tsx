@@ -17,9 +17,17 @@ export default function GlobalNavbar() {
             title: 'Projects',
             href: '/',
         },
+        // {
+        //     title: 'Contact',
+        //     href: '/',
+        // },
+        // {
+        //     title: 'Art',
+        //     href: '/',
+        // },
         {
-            title: 'Contact',
-            href: '/',
+            title: 'Source',
+            href: 'https://github.com/Joecey/portfolio-site',
         },
     ]
 
