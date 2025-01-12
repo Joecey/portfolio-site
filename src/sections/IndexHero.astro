@@ -4,6 +4,85 @@ import heroImage from '@/assets/hero-image.webp'
 import GithubIcon from '@/components/github'
 import LinkedIcon from '@/components/linkedin'
 import TechTab from '@/components/techTab'
+
+// Tech stack images
+import {
+	reactLogo,
+	typescriptLogo,
+	astroLogo,
+	honoLogo,
+	drizzleLogo,
+	tailwindLogo,
+	supabaseLogo,
+	graphQlLogo,
+	digitalOceanLogo,
+	awsLogo,
+	pythonLogo,
+} from '@/assets/index.ts'
+
+type techStackType = {
+	name: string
+	motionDelay: string
+	svgData: ImageMetadata
+}
+
+const techStack: techStackType[] = [
+	{
+		name: 'React',
+		motionDelay: 'motion-delay-0',
+		svgData: reactLogo,
+	},
+	{
+		name: 'Typescript',
+		motionDelay: 'motion-delay-75',
+		svgData: typescriptLogo,
+	},
+	{
+		name: 'Astro.js',
+		motionDelay: 'motion-delay-100',
+		svgData: astroLogo,
+	},
+	{
+		name: 'Deno + Hono',
+		motionDelay: 'motion-delay-150',
+		svgData: honoLogo,
+	},
+	{
+		name: 'DrizzleORM',
+		motionDelay: 'motion-delay-200',
+		svgData: drizzleLogo,
+	},
+	{
+		name: 'Tailwind + Ark UI',
+		motionDelay: 'motion-delay-300',
+		svgData: tailwindLogo,
+	},
+	{
+		name: 'Supabase',
+		motionDelay: 'motion-delay-[350ms]',
+		svgData: supabaseLogo,
+	},
+	{
+		name: 'GraphQL',
+		motionDelay: 'motion-delay-[400ms]',
+		svgData: graphQlLogo,
+	},
+	{
+		name: 'Digital Ocean',
+		motionDelay: 'motion-delay-[450ms]',
+		svgData: digitalOceanLogo,
+	},
+	{
+		name: 'AWS',
+		motionDelay: 'motion-delay-500',
+		svgData: awsLogo,
+	},
+	{
+		name: 'Python',
+		motionDelay: 'motion-delay-[550ms]',
+		svgData: pythonLogo,
+	},
+]
 ---
 
 <div
@@ -13,7 +92,7 @@ import TechTab from '@/components/techTab'
 	<div class="flex flex-col gap-8 md:flex-1">
 		<div id="hero-standout" class="flex flex-col items-center gap-4 md:flex-row">
 			<div
-				class="relative w-48 animate-float rounded-full bg-gradient-to-tr from-myTheme-accent to-myTheme-primary p-1 md:w-36"
+				class="motion-preset-seesaw-sm relative w-48 rounded-full bg-gradient-to-tr from-myTheme-accent to-myTheme-primary p-1 md:w-36"
 			>
 				<Image
 					src={heroImage}
@@ -84,10 +163,18 @@ import TechTab from '@/components/techTab'
 					</p>
 				</a>
 			</div>
-			<div id="text-stack-list" class="mt-4 flex flex-wrap items-center gap-2">
-				<p class="font-bold">Tech stack:&nbsp;</p>
-				<TechTab name="React" />
-				<TechTab name="Typescript" />
+
+			<p class="mt-2 font-bold">I usually use these tools:&nbsp;</p>
+			<div id="text-stack-list" class="flex flex-wrap items-center gap-2">
+				{
+					techStack.map((tech) => (
+						<TechTab
+							name={tech.name}
+							motionDelay={tech.motionDelay}
+							svgData={tech.svgData}
+						/>
+					))
+				}
 			</div>
 		</div>
 	</div>

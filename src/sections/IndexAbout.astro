@@ -71,6 +71,12 @@ const workMilestoneContent: WorkMilestoneProps[] = [
 			'Created client management software and branded mobile apps for gym owners and personal trainers',
 	},
 ]
+
+const sortedMilestoneContent: WorkMilestoneProps[] = workMilestoneContent.sort((a, b) => {
+	const aMilestoneStart = new Date(a.startPeriod)
+	const bMilestoneStart = new Date(b.startPeriod)
+	return aMilestoneStart > bMilestoneStart ? -1 : 1
+})
 ---
 
 <svg
@@ -101,7 +107,7 @@ const workMilestoneContent: WorkMilestoneProps[] = [
 				</h1>
 				<a href="#about">
 					<Button className="text-md w-fit font-bold" size={'sm'}
-						>View Portfolio &rarr;</Button
+						>View all projects &rarr;</Button
 					>
 				</a>
 			</div>
@@ -119,8 +125,21 @@ const workMilestoneContent: WorkMilestoneProps[] = [
 					Latest Fry-Up 🔥👨‍🍳
 				</h2>
 				<hr />
+				<!-- TODO: make this dynamic -->
 				<a
-					id="latest-project-link"
+					href="https://bsky.joedoescoding.com/"
+					target="_blank"
+					class="rounded-md bg-myTheme-secondary/10 p-2 transition-all hover:bg-myTheme-accent/20"
+				>
+					<h3 class="font-body font-bold">Bluesky Follower Percentage 📈</h3>
+					<p class="mt-1">
+						Web app to showcase the percentage of all Bluesky users that follow a
+						specific account. Also includes basic follower profile analytics such as
+						recent followers and most popular followers
+					</p>
+				</a>
+
+				<a
 					href="https://github.com/Joecey/deno-vlrgg-api"
 					target="_blank"
 					class="rounded-md bg-myTheme-secondary/10 p-2 transition-all hover:bg-myTheme-accent/20"
@@ -142,7 +161,7 @@ const workMilestoneContent: WorkMilestoneProps[] = [
 				<hr />
 				<div id="joe-linogao-previous-work" class="flex flex-col gap-4 md:gap-2">
 					{
-						workMilestoneContent.map((milestone: WorkMilestoneProps) => {
+						sortedMilestoneContent.map((milestone: WorkMilestoneProps) => {
 							return (
 								<WorkMilestone
 									occupation={milestone.occupation}

@@ -13,16 +13,6 @@ export default {
             },
         },
         extend: {
-            animation: {
-                float: 'float 3s ease-in-out infinite',
-            },
-            keyframes: {
-                float: {
-                    '0%, 100%': { transform: 'translateY(10px) ' },
-                    '50%': { transform: 'translateY(0px)' },
-                },
-            },
-
             colors: {
                 myTheme: {
                     text: '#120803',
@@ -42,5 +32,5 @@ export default {
             bold: '700',
         },
     },
-    plugins: [require('tailwindcss-animate')],
+    plugins: [require('tailwindcss-motion')],
 }
