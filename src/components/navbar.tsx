@@ -34,15 +34,12 @@ export default function GlobalNavbar() {
     return (
         <header>
             <div className="fixed z-10 flex w-full justify-center ">
-                <nav
-                    id="global-navbar"
-                    className="mt-8 flex w-fit max-w-5xl justify-center gap-8 rounded-full bg-myTheme-background/50 p-8 py-2 text-sm shadow-lg outline outline-1 outline-myTheme-primary ring-1 ring-black/5 backdrop-blur sm:text-base"
-                >
+                <nav id="global-navbar" className="mt-8 flex w-fit max-w-5xl justify-center gap-2 ">
                     {navigationLinks.map((navItem: navigationLinkProps) => {
                         return (
                             <a
                                 href={navItem.href}
-                                className="font-heading transition-colors ease-in hover:text-myTheme-accent"
+                                className="rounded-full bg-myTheme-background/50 px-4 py-1 font-heading text-sm shadow-lg outline outline-1 outline-myTheme-primary ring-1 ring-black/5 backdrop-blur transition-colors ease-in hover:bg-myTheme-accent/50  sm:text-base"
                             >
                                 {navItem.title}
                             </a>
