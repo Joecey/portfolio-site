@@ -6,7 +6,7 @@ import drizzleLogo from './techLogos/drizzle.svg'
 import tailwindLogo from './techLogos/tailwindcss.svg'
 import supabaseLogo from './techLogos/supabase.svg'
 import graphQlLogo from './techLogos/graphql.svg'
-import digitalOceanLogo from './techLogos/digitalOcean.svg'
+import digitalOceanLogo from './techLogos/digitalocean.svg'
 import awsLogo from './techLogos/aws.svg'
 import pythonLogo from './techLogos/python.svg'
 
